@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enhanced Pain Point Highlighting with Better Colors */
+.pain-point {
+  @apply rounded-md px-2 py-1 cursor-pointer transition-all duration-200 font-medium border-l-4 shadow-sm;
+}
+
+.pain-point-high {
+  @apply bg-red-100 text-red-900 border-red-500 hover:bg-red-200;
+}
+
+.pain-point-medium {
+  @apply bg-amber-100 text-amber-900 border-amber-500 hover:bg-amber-200;
+}
+
+.pain-point-low {
+  @apply bg-yellow-100 text-yellow-900 border-yellow-500 hover:bg-yellow-200;
+}
+
+.pain-point-selected {
+  @apply ring-2 ring-blue-500 ring-offset-2 scale-105 shadow-md;
+}
+
+/* Enhanced Entity Highlighting */
+.entity {
+  @apply rounded-md px-2 py-1 font-medium border-b-2 transition-all duration-200;
+}
+
+.entity.entity-party {
+  @apply bg-blue-100 text-blue-900 border-blue-500 hover:bg-blue-200;
+}
+
+.entity.entity-date {
+  @apply bg-purple-100 text-purple-900 border-purple-500 hover:bg-purple-200;
+}
+
+.entity.entity-amount {
+  @apply bg-emerald-100 text-emerald-900 border-emerald-500 hover:bg-emerald-200;
+}
+
+.entity.entity-location {
+  @apply bg-orange-100 text-orange-900 border-orange-500 hover:bg-orange-200;
+}
+
+.entity.entity-clause {
+  @apply bg-gray-100 text-gray-900 border-gray-500 hover:bg-gray-200;
+}
+
+/* Dark Mode Overrides */
+.dark .pain-point-high {
+  @apply bg-red-900/40 text-red-300 border-red-400 hover:bg-red-900/60;
+}
+
+.dark .pain-point-medium {
+  @apply bg-amber-900/40 text-amber-300 border-amber-400 hover:bg-amber-900/60;
+}
+
+.dark .pain-point-low {
+  @apply bg-yellow-900/40 text-yellow-300 border-yellow-400 hover:bg-yellow-900/60;
+}
+
+.dark .entity.entity-party {
+  @apply bg-blue-900/40 text-blue-300 border-blue-400 hover:bg-blue-900/60;
+}
+
+.dark .entity.entity-date {
+  @apply bg-purple-900/40 text-purple-300 border-purple-400 hover:bg-purple-900/60;
+}
+
+.dark .entity.entity-amount {
+  @apply bg-emerald-900/40 text-emerald-300 border-emerald-400 hover:bg-emerald-900/60;
+}
+
+.dark .entity.entity-location {
+  @apply bg-orange-900/40 text-orange-300 border-orange-400 hover:bg-orange-900/60;
+}
+
+.dark .entity.entity-clause {
+  @apply bg-gray-700/60 text-gray-300 border-gray-500 hover:bg-gray-700/80;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Slide in animation */
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation-fill-mode: both;
+}
+
+.slide-in-from-bottom-2 {
+  animation: slide-in-from-bottom 0.3s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}

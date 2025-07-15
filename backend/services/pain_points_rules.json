@@ -1,0 +1,142 @@
+[
+  {
+    "pattern": "unlimited liability",
+    "issue": "Unlimited liability exposure",
+    "type": "high_risk",
+    "risk_score": 80,
+    "contract_types": ["employment", "vendor", "partnership"]
+  },
+  {
+    "pattern": "auto(matic)? renewal(?!.*\\b30[-\\s]day)",
+    "issue": "Auto-renewal without 30-day exit clause",
+    "type": "medium_risk",
+    "risk_score": 65,
+    "contract_types": ["employment", "vendor", "lease"]
+  },
+  {
+    "pattern": "non[-\\s]?compete",
+    "issue": "Non-compete clause",
+    "type": "medium_risk",
+    "risk_score": 60,
+    "contract_types": ["employment"]
+  },
+  {
+    "pattern": "termination.*without.*notice",
+    "issue": "Termination without sufficient notice",
+    "type": "high_risk",
+    "risk_score": 80,
+    "contract_types": ["employment", "vendor"]
+  },
+  {
+    "pattern": "no liability|limited liability",
+    "issue": "No or limited liability clause (may protect one side unfairly)",
+    "type": "medium_risk",
+    "risk_score": 60,
+    "contract_types": ["employment", "vendor", "lease"]
+  },
+  {
+    "pattern": "waive.*right(s)? to.*legal action",
+    "issue": "Waiver of rights to legal action",
+    "type": "high_risk",
+    "risk_score": 85,
+    "contract_types": ["employment", "nda", "vendor"]
+  },
+  {
+    "pattern": "binding arbitration(?!.*neutral)",
+    "issue": "Binding arbitration without a neutral body",
+    "type": "medium_risk",
+    "risk_score": 60,
+    "contract_types": ["employment", "partnership"]
+  },
+  {
+    "pattern": "salary.*subject to change|salary.*without prior notice",
+    "issue": "Salary subject to change without prior notice",
+    "type": "medium_risk",
+    "risk_score": 55,
+    "contract_types": ["employment"]
+  },
+  {
+    "pattern": "confidential information.*(broad|wide|including but not limited to)",
+    "issue": "Vague or overly broad confidentiality scope",
+    "type": "medium_risk",
+    "risk_score": 65,
+    "contract_types": ["nda"]
+  },
+  {
+    "pattern": "remain confidential.*(indefinitely|forever|in perpetuity)",
+    "issue": "Indefinite confidentiality duration",
+    "type": "medium_risk",
+    "risk_score": 60,
+    "contract_types": ["nda"]
+  },
+  {
+    "pattern": "recipient.*(allowed to|may).*disclose",
+    "issue": "Loophole in confidentiality obligations",
+    "type": "high_risk",
+    "risk_score": 75,
+    "contract_types": ["nda"]
+  },
+  {
+    "pattern": "payment.*within.*(60|90).*days",
+    "issue": "Delayed payment terms",
+    "type": "medium_risk",
+    "risk_score": 60,
+    "contract_types": ["vendor", "services"]
+  },
+  {
+    "pattern": "termination.*(any time|without cause)",
+    "issue": "Unilateral termination clause",
+    "type": "high_risk",
+    "risk_score": 80,
+    "contract_types": ["vendor", "services"]
+  },
+  {
+    "pattern": "rent.*increase.*(at landlord's discretion|without notice)",
+    "issue": "Rent escalation without control",
+    "type": "medium_risk",
+    "risk_score": 70,
+    "contract_types": ["lease"]
+  },
+  {
+    "pattern": "tenant.*responsible.*(repairs|maintenance)",
+    "issue": "Unfair repair responsibility",
+    "type": "medium_risk",
+    "risk_score": 60,
+    "contract_types": ["lease"]
+  },
+  {
+    "pattern": "capital contribution.*not equal|no equal share",
+    "issue": "Unequal capital obligation",
+    "type": "medium_risk",
+    "risk_score": 60,
+    "contract_types": ["partnership"]
+  },
+  {
+    "pattern": "dispute resolution.*court only",
+    "issue": "No arbitration clause for disputes",
+    "type": "medium_risk",
+    "risk_score": 60,
+    "contract_types": ["partnership", "mou"]
+  },
+  {
+    "pattern": "mandatory arbitration",
+    "issue": "Mandatory arbitration",
+    "type": "medium_risk",
+    "risk_score": 65,
+    "contract_types": ["employment", "vendor", "partnership"]
+  },
+  {
+    "pattern": "forfeit(ed|ure)? (of )?(unused|accrued)? vacation",
+    "issue": "Forfeiture of accrued vacation",
+    "type": "high_risk",
+    "risk_score": 80,
+    "contract_types": ["employment"]
+  },
+  {
+    "pattern": "employee handbook",
+    "issue": "Employee handbook incorporation",
+    "type": "medium_risk",
+    "risk_score": 60,
+    "contract_types": ["employment"]
+  }
+]

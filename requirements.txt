@@ -28,6 +28,8 @@ pydantic_core==2.33.2
 Pygments==2.19.2
 PyMuPDF==1.26.3
 python-multipart==0.0.20
+python-dotenv
+requests
 requests==2.32.4
 rich==14.0.0
 shellingham==1.5.4
