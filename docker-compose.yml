@@ -1,0 +1,17 @@
+version: '3.8' # Specifies the version of the Docker Compose file format
+
+services: # Defines the different application services
+  db: # The name of our database service
+    image: postgres:15-alpine # The official PostgreSQL version 15 image (lightweight version)
+    container_name: contractiq_db # A custom name for our running container
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=contractiq
+    ports:
+      - "5432:5432" # Maps port 5432 on your machine to port 5432 in the container
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persists the database data even if the container is removed
+
+volumes: # Defines the named volume for data persistence
+  postgres_data:
