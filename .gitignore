@@ -25,7 +25,7 @@ Thumbs.db
 # Environment variables
 # The .env file contains secrets and should NEVER be committed
 .env
-.env.example
+
 
 # Node / Frontend dependencies
 # This is standard for React/Vite projects
